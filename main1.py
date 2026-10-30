@@ -14,11 +14,11 @@ from pypdf import PdfReader
 from io import StringIO
 from langchain_tavily import TavilySearch
 import streamlit as st
-os.environ["Anthropic_API_KEY"] = "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"
+os.environ["Anthropic_API_KEY"] = "Anthropic_API_Key"
 from langchain_groq import ChatGroq
-llm = ChatGroq(model="qwen/qwen3.8-27b",api_key="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")
+llm = ChatGroq(model="qwen/qwen3.8-27b",api_key="Groq_API_Key")
 #llm = ChatAnthropic(model="claude-3.0", api_key=os.environ["Anthropic_API_KEY"])
-os.environ["TAVILY_API_KEY"]="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"
+os.environ["TAVILY_API_KEY"]="Tavily_API_Key"
 initialize_database()
 df_result = get_all_claims()
 dl_result = delete_all_claims()
